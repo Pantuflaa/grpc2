@@ -1,0 +1,17 @@
+syntax = "proto3";
+package pb;
+
+service Peticion{
+        rpc RealizarPeticion(Objeto) returns(Serie) {}
+}
+message Objeto {
+        string id = 1;
+        string producto = 2;
+        int32 valor = 3;
+        string tienda = 4;
+        string destino = 5;
+        int32 prioritario = 6;
+}
+message Serie{
+        int32 serie = 1;
+}
